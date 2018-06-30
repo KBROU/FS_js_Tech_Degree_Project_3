@@ -296,7 +296,8 @@ function creditCheck () {
 //Validate entire form to enable submit button
 
  function formVal () {
-   if (payment.options[1].value === payment.value) {
+   creditCheck ();
+     if (payment.options[1].value === payment.value) {
      if (firstName.value === "") {
        registerButton.disabled = true;
        } else if (emailResult === false) {
@@ -426,7 +427,6 @@ document.addEventListener('change', (e) => {
     formVal();
     checkBox ();
     emailCheck ();
-    creditCheck ();
     errorMessage ();
 });
 
@@ -435,7 +435,6 @@ document.addEventListener('click', (e) => {
     formVal();
     checkBox ();
     emailCheck ();
-    creditCheck ();
 });
 
 //Event listener for any form input
@@ -443,7 +442,6 @@ document.addEventListener('input', (e) => {
     formVal();
     checkBox ();
     emailCheck ();
-    creditCheck ();
     errorMessage ();
 });
 
